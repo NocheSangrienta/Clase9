@@ -21,7 +21,8 @@ class Cliente:
         self.respuesta1 = respuesta1
         self.pregunta2 = pregunta2
         self.respuesta2 = respuesta2
-        self.pregunta3 = respuesta3
+        self.pregunta3 = pregunta3
+        self.respuesta3 = respuesta3
     def __str__(self):
         return f"Nombre: {self.nombreCompleto} Documento: {self.documento} "
 
