@@ -7,6 +7,8 @@ from PyQt5.QtWidgets import QMainWindow, QDesktopWidget, QLabel, QVBoxLayout, QA
 from PyQt5 import QtGui, QtCore
 from PyQt5.QtCore import Qt
 from cliente import Cliente
+from ventana2 import Ventana2
+
 class Ventana1(QMainWindow):
 
     def __init__(self, parent=None):
@@ -324,7 +326,7 @@ class Ventana1(QMainWindow):
         self.botonBuscar.setStyleSheet("background-color: #008B45;"
                                        "color: #FFFFFF;"
                                        "padding: 10px;"
-                                       "margin-top: 40px;")
+                                       "margin-top: 10px;")
 
         self.botonBuscar.clicked.connect(self.accion_botonBuscar)
 
@@ -338,16 +340,31 @@ class Ventana1(QMainWindow):
         self.botonRecuperar.setStyleSheet("background-color: #008B45;"
                                        "color: #FFFFFF;"
                                        "padding: 10px;"
-                                       "margin-top: 40px;")
+                                       "margin-top: 10px;")
 
         self.botonRecuperar.clicked.connect(self.accion_botonRecuperar)
 
 
-
-
-
         # Agregamos los botones al layout ladoDerecho:
         self.ladoDerecho.addRow(self.botonBuscar, self.botonRecuperar)
+
+        # --------Boton Continuar---------
+        # Hacemos el boton para pasar ala siguiente ventana:
+        self.botonContinuar = QPushButton("Continuar")
+
+        self.botonContinuar.setFixedWidth(90)
+        self.botonContinuar.setStyleSheet("background-color: #008B45;"
+                                          "color: #FFFFFF;"
+                                          "padding:10px;"
+                                          "margin-top: 10px;"
+                                          )
+
+        # Hacemos que el botonContinuar tenga su metodo
+        self.botonContinuar.clicked.connect(self.accion_botonContinuar)
+
+        # Agregamos el botonContinuar al layoutDerecho:
+        self.ladoDerecho.addRow(self.botonContinuar)
+
 
 
         # Agregamos el layout ladoDerecho al layout horizontal:
@@ -739,6 +756,11 @@ class Ventana1(QMainWindow):
                 # Hacemos que la ventana de dialogo se vea
                 self.ventanaDialogo.exec_()
 
+    # Metodo del boton botonContinuar
+    def accion_botonContinuar(self):
+        self.hide()
+        self.ventana2 = Ventana2(self)
+        self.ventana2.show()
 
 
 
