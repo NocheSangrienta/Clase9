@@ -1,1 +1,4 @@
-cristian camilo cifuentes;NocheLunar;cristian1142;cristian1142;1000535072;ceballoscristian7777@gmail.com;nombre mio;cristian;segundo nombre;camilo;apellido;cifuentes
+cristian camilo cifuentes;NocheLunar;cristian1142;1000535072;ceballoscristian7777@gmail.com;nombre mio;cristian;segundo nombre;camilo;apellido;cifuentes
+cristian camilo cifuentes;NocheLunar;cristian1142;1000535072;ceballoscristian7777@gmail.com;nombre de mi mama;Luz Dary;nombre de mi primer perro;lulu;universidad donde estudio;politenico jaime isaza cadavid
+a;a;a;a;a;a;a;a;a;a;a;a
+a;a;a;a;a;a;a;a;a;a;a;a
