@@ -9,6 +9,7 @@ from PyQt5 import QtGui
 import math
 
 from cliente import Cliente
+from ventana3 import Ventana3
 
 
 class Ventana2(QMainWindow):
@@ -205,6 +206,24 @@ class Ventana2(QMainWindow):
         # Establecemos el metodo para que funcionen todos los botones
         self.botones.idClicked.connect(self.metodo_accionBotones)
 
+             #-----------botonFormaTabular-------------------
+
+        # Hacemos el boton para tabular ala entna anterios
+        self.botonFormaTabular = QPushButton("Forma Tabular")
+
+        # Estableceos el ancho
+        self.botonFormaTabular.setFixedWidth(100)
+
+        self.botonFormaTabular.setStyleSheet("background-color: #008B45;"
+                                       "color: #FFFFFF;"
+                                       "padding: 10px;"
+                                       "margin-top: 10px;"
+                                       )
+
+        #Hacemos que el boton botonFormaTabular tengga s metodo
+        self.botonFormaTabular.clicked.accion(self.metodo_botonFormaTabular)
+
+        self.vertical.addWidget(self.botonFormaTabular)
 
 
         # --------------BotonVolver----------------
@@ -235,6 +254,11 @@ class Ventana2(QMainWindow):
 
     def metodo_accionBotones(self, cedulaUsuario):
         print(cedulaUsuario)
+
+    def metodo_botonVolver(self):
+        self.hide()
+        self.ventana3 = Ventana3(self)
+        self.ventana3.show()
 
 
 if __name__ == '__main__':
