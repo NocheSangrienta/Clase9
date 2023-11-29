@@ -759,8 +759,10 @@ class Ventana1(QMainWindow):
     # Metodo del boton botonContinuar
     def accion_botonContinuar(self):
         self.hide()
-        self.ventana2 = Ventana2()
+        self.ventana2 = Ventana2(self)
         self.ventana2.show()
+
+
 
 
 

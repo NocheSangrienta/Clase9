@@ -12,10 +12,11 @@ from cliente import Cliente
 
 
 class Ventana2(QMainWindow):
-    def __init__(self, parent=None):
-        super(Ventana2, self).__init__(parent)
+    def __init__(self, anterior):
+        super(Ventana2, self).__init__(anterior)
 
-
+        #Creamos un atributo que guarde la ventana anterior:
+        self.ventanaAnterior = anterior
 
         self.setWindowTitle("Usuarios registrados")
 
@@ -125,9 +126,8 @@ class Ventana2(QMainWindow):
                 lista[7],
                 lista[8],
                 lista[9],
+                lista[10],
             )
-
-
 
             # Metemos el  objeto en la lista de usuarios:
             self.usuarios.append(u)
@@ -145,7 +145,7 @@ class Ventana2(QMainWindow):
         self.contador = 0
 
         # Definimos la cantidad de elementos para mostrar por columna
-        self.elementosPorColumna = 1
+        self.elementosPorColumna = 3
 
         # CCalculamos el numero de filas
         # Redondeamos el entero superior + 1 dividimos por elementosPorColumna:
@@ -224,6 +224,9 @@ class Ventana2(QMainWindow):
 
         # Hacemos que el boton tenga su metodo
         self.botonVolver.clicked.connect(self.metodo_botonVolver)
+
+        #  Metemos el layout en el botonVolver
+        self.vertical.addWidget(self.botonVolver)
 
         # ----------------OJOO IMPORTANTE PONER AL FINAL-----------------
 
