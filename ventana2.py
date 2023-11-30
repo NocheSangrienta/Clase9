@@ -264,6 +264,9 @@ class Ventana2(QMainWindow):
 if __name__ == '__main__':
 
     app = QApplication(sys.argv)
+
     ventana2 = Ventana2()
+
     ventana2.show()
+
     sys.exit(app.exec_())

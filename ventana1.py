@@ -666,7 +666,7 @@ class Ventana1(QMainWindow):
                 self.datoscorrectos
         ):
             # Abrimos el archivo en modo de lectura:
-            self.file = open('datos/clienteS.txt', 'rb')
+            self.file = open('datos/clientes.txt', 'rb')
 
             # Lista vacia para guarda los usuarios:
             usuarios = []
@@ -767,6 +767,7 @@ class Ventana1(QMainWindow):
 
 
 if __name__ == '__main__':
+
     app = QApplication(sys.argv)
 
     ventana1 = Ventana1()
